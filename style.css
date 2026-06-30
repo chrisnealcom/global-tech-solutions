@@ -1,0 +1,337 @@
+<style>
+/* ==================================================
+   GLOBAL STYLES
+================================================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #eef6ff, #ffffff);
+    color: #223;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+
+/* ==================================================
+   HEADER / HERO SECTION
+================================================== */
+
+header {
+    position: relative;
+    min-height: 80vh;
+
+    background:
+        linear-gradient(
+            rgba(6, 16, 44, 0.75),
+            rgba(6, 16, 44, 0.65)
+        ),
+        url("images/hero-office.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 32px;
+
+    background: white;
+    color: #2563eb;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+}
+
+/* ==================================================
+   HEADER / Video Section
+================================================== */
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        rgba(6, 16, 44, 0.75),
+        rgba(6, 16, 44, 0.65)
+    );
+
+    z-index: -1;
+}
+
+/* ==================================================
+   CONTACT INFO (PHONE / EMAIL)
+================================================== */
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+
+    padding: 6px 10px;
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.12);
+    display: inline-block;
+}
+
+.contact-info a:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* ==================================================
+   NAVIGATION BAR
+================================================== */
+
+nav {
+    background: #0f172a;
+    padding: 15px;
+
+    text-align: center;
+
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+}
+
+
+/* ==================================================
+   SERVICES SECTION
+================================================== */
+
+.services {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+
+    padding: 25px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.service-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s ease;
+}
+
+.service-link:hover {
+    color: #2563eb;
+}
+
+
+/* ==================================================
+   IMAGE GALLERY SECTION
+================================================== */
+
+.gallery-section {
+    background: #f8fafc;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.gallery-section p {
+    max-width: 700px;
+    margin: auto auto 40px;
+    color: #555;
+}
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+    transition: transform .3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+
+/* ==================================================
+   CONTACT FORM
+================================================== */
+
+form {
+    max-width: 600px;
+    margin: auto;
+
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+    margin: 8px 0;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+button {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+
+    color: white;
+    border: none;
+
+    padding: 14px 22px;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.95;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    background: #0f172a;
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+}
+
+/* ==================================================
+   RESPONSIVE DESIGN
+================================================== */
+
+@media (max-width: 768px) {
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* ==================================================
+   PHONES VIEW
+================================================== */
+
+@media (max-width: 768px) {
+
+    .contact-info {
+        position: static;
+        margin-bottom: 30px;
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+</style>
